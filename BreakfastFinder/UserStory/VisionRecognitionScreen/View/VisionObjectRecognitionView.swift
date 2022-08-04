@@ -10,12 +10,12 @@ import UIKit
 
 final class VisionObjectRecognitionView: UIView {
     
-    private var bufferSize: CGSize = .zero
+    var bufferSize: CGSize = .zero
     
     private(set) var previewView: UIView
     
-    private var rootLayer: CALayer! = nil
-    private var detectionOverlay: CALayer! = nil
+    private(set) var rootLayer: CALayer! = nil
+    private(set) var detectionOverlay: CALayer! = nil
     
     // MARK: - Life cycle
     override init(frame: CGRect) {
@@ -29,8 +29,20 @@ final class VisionObjectRecognitionView: UIView {
     }
     
     // MARK: - Public
-    func setBufferSize(size: CGSize) {
+    func setBufferSize(_ size: CGSize) {
         bufferSize = size
+    }
+    
+    func setBufferWidth(_ width: CGFloat) {
+        bufferSize.width = width
+    }
+    
+    func setBufferHeight(_ height: CGFloat) {
+        bufferSize.height = height
+    }
+    
+    func setupRootLayer() {
+        rootLayer = previewView.layer
     }
     
     func setupLayers() {
@@ -98,6 +110,8 @@ final class VisionObjectRecognitionView: UIView {
     
     // MARK: - Private
     private func setupLayout() {
+        detectionOverlay = CALayer()
+        
         addSubview(previewView)
         
         previewView.translatesAutoresizingMaskIntoConstraints = false

@@ -10,6 +10,7 @@
 		04DA2A16289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04DA2A15289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel */; };
 		04DA2A19289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA2A18289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift */; };
 		04DA2A21289C212B00C8CB02 /* UIDevice+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA2A20289C212B00C8CB02 /* UIDevice+Orientation.swift */; };
+		04DA2A23289C460C00C8CB02 /* VisionObjectRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA2A22289C460C00C8CB02 /* VisionObjectRecognitionViewModel.swift */; };
 		FA4750CA20BF3F48003E19ED /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */; };
 		FA68723920AA028000D82F25 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA68723820AA028000D82F25 /* ObjectDetector.mlmodel */; };
 		FAB417F62099308400494E9C /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */; };
@@ -22,6 +23,7 @@
 		04DA2A15289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
 		04DA2A18289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionView.swift; sourceTree = "<group>"; };
 		04DA2A20289C212B00C8CB02 /* UIDevice+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Orientation.swift"; sourceTree = "<group>"; };
+		04DA2A22289C460C00C8CB02 /* VisionObjectRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewModel.swift; sourceTree = "<group>"; };
 		7984D3D3A63BDFC4A07FEF8F /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		C2A2AB60C2A2AB2000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3CB966204CD821C6969C2A3 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		04DA2A1D289C1FD900C8CB02 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04DA2A22289C460C00C8CB02 /* VisionObjectRecognitionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				FAB417F62099308400494E9C /* VisionObjectRecognitionViewController.swift in Sources */,
 				FAD5009F1ED668B60074D713 /* AppDelegate.swift in Sources */,
 				04DA2A16289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel in Sources */,
+				04DA2A23289C460C00C8CB02 /* VisionObjectRecognitionViewModel.swift in Sources */,
 				FA68723920AA028000D82F25 /* ObjectDetector.mlmodel in Sources */,
 				04DA2A19289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift in Sources */,
 			);
