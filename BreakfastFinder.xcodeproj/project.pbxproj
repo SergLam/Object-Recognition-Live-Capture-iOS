@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04DA2A16289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04DA2A15289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel */; };
 		04DA2A19289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA2A18289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift */; };
+		04DA2A21289C212B00C8CB02 /* UIDevice+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA2A20289C212B00C8CB02 /* UIDevice+Orientation.swift */; };
 		FA4750CA20BF3F48003E19ED /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */; };
 		FA68723920AA028000D82F25 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA68723820AA028000D82F25 /* ObjectDetector.mlmodel */; };
 		FAB417F62099308400494E9C /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		04DA2A15289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
 		04DA2A18289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionView.swift; sourceTree = "<group>"; };
+		04DA2A20289C212B00C8CB02 /* UIDevice+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Orientation.swift"; sourceTree = "<group>"; };
 		7984D3D3A63BDFC4A07FEF8F /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		C2A2AB60C2A2AB2000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3CB966204CD821C6969C2A3 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -83,8 +85,8 @@
 		04DA2A17289BF1AE00C8CB02 /* VisionRecognitionScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */,
-				04DA2A18289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift */,
+				04DA2A1D289C1FD900C8CB02 /* ViewModel */,
+				04DA2A1C289C1FD100C8CB02 /* View */,
 			);
 			path = VisionRecognitionScreen;
 			sourceTree = "<group>";
@@ -103,6 +105,38 @@
 				FAD500AA1ED668B60074D713 /* Info.plist */,
 			);
 			path = BundleFiles;
+			sourceTree = "<group>";
+		};
+		04DA2A1C289C1FD100C8CB02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */,
+				04DA2A18289BF1CB00C8CB02 /* VisionObjectRecognitionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04DA2A1D289C1FD900C8CB02 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04DA2A1E289C210800C8CB02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04DA2A1F289C211100C8CB02 /* UIDevice */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04DA2A1F289C211100C8CB02 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				04DA2A20289C212B00C8CB02 /* UIDevice+Orientation.swift */,
+			);
+			path = UIDevice;
 			sourceTree = "<group>";
 		};
 		6699E7B5AD92619B7FE916AC /* LICENSE */ = {
@@ -143,6 +177,7 @@
 		FAD5009D1ED668B60074D713 /* BreakfastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				04DA2A1E289C210800C8CB02 /* Extensions */,
 				04DA2A1B289BF5F800C8CB02 /* BundleFiles */,
 				04DA2A1A289BF5EA00C8CB02 /* Application */,
 				04DA2A0F289BCF4200C8CB02 /* UserStory */,
@@ -224,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DA2A21289C212B00C8CB02 /* UIDevice+Orientation.swift in Sources */,
 				FAB417F62099308400494E9C /* VisionObjectRecognitionViewController.swift in Sources */,
 				FAD5009F1ED668B60074D713 /* AppDelegate.swift in Sources */,
 				04DA2A16289BDD2E00C8CB02 /* YOLOv3Int8LUT.mlmodel in Sources */,

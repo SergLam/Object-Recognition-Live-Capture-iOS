@@ -140,7 +140,7 @@ final class VisionObjectRecognitionViewController: UIViewController {
         return error
     }
     
-    func drawVisionRequestResults(_ results: [Any]) {
+    func drawVisionRequestResults(_ results: [VNObservation]) {
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         detectionOverlay.sublayers = nil // remove all the old recognized objects
@@ -226,25 +226,6 @@ final class VisionObjectRecognitionViewController: UIViewController {
         return shapeLayer
     }
     
-    func exifOrientationFromDeviceOrientation() -> CGImagePropertyOrientation {
-        let curDeviceOrientation = UIDevice.current.orientation
-        let exifOrientation: CGImagePropertyOrientation
-        
-        switch curDeviceOrientation {
-        case UIDeviceOrientation.portraitUpsideDown:  // Device oriented vertically, home button on the top
-            exifOrientation = .left
-        case UIDeviceOrientation.landscapeLeft:       // Device oriented horizontally, home button on the right
-            exifOrientation = .upMirrored
-        case UIDeviceOrientation.landscapeRight:      // Device oriented horizontally, home button on the left
-            exifOrientation = .down
-        case UIDeviceOrientation.portrait:            // Device oriented vertically, home button on the bottom
-            exifOrientation = .up
-        default:
-            exifOrientation = .up
-        }
-        return exifOrientation
-    }
-    
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
@@ -255,7 +236,7 @@ extension VisionObjectRecognitionViewController: AVCaptureVideoDataOutputSampleB
             return
         }
         
-        let exifOrientation = exifOrientationFromDeviceOrientation()
+        let exifOrientation = UIDevice.current.exifOrientationFromDeviceOrientation()
         
         let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: exifOrientation, options: [:])
         do {
